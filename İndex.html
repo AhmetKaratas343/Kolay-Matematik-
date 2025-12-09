@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Bilimsel Gösterim Dönüştürücü</title>
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 80px;
+}
+input, button {
+    padding: 10px;
+    font-size: 18px;
+}
+</style>
+</head>
+<body>
+<h1>Bilimsel Gösterim Dönüştürücü</h1>
+
+<input id="sayi" type="text" placeholder="Sayı gir (örn: -12500)">
+<br><br>
+<button onclick="donustur()">Dönüştür</button>
+
+<h2 id="sonuc"></h2>
+
+<script>
+function donustur() {
+    let sayi = Number(document.getElementById("sayi").value);
+    let bilimsel = sayi.toExponential();
+    document.getElementById("sonuc").innerText = bilimsel;
+}
+</script>
+</body>
+</html>
